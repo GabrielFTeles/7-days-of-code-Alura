@@ -34,8 +34,8 @@ document
 //Função chamada quando algum número é pressionado.
 function numberPressed(nmbr) {
   let verify = verifyPoint(nmbr);
-  if (verify === true && numbers.length != 14) {
-    if (numbers === "0") {
+  if (verify == true && numbers.length != 14) {
+    if (numbers == "0") {
       numbers = "";
     }
     numbers += nmbr;
@@ -74,7 +74,7 @@ function calcPressed(calc) {
   }
 
   equalDisabled("no");
-  buttonDisabled("y");
+  calcButtonsDisabled("y");
   clearScreen();
 }
 
@@ -136,7 +136,7 @@ function calculate() {
 
   numbers = result.toString();
   history = result.toString();
-  buttonDisabled("no");
+  calcButtonsDisabled("no");
   screenNumberUpdate(numbers);
 }
 
@@ -152,7 +152,7 @@ function clearPressed() {
   b = 0;
   history = "";
   clearScreen();
-  buttonDisabled("no");
+  calcButtonsDisabled("no");
   historyScreen.innerText = "";
 }
 
