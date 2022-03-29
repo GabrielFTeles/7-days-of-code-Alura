@@ -24,8 +24,8 @@ document
     else if (key == "Enter" && equal.disabled == false) {
       resultPressed();
     } else if (key == "Backspace") {
-        backspacePressed();
-      }
+      backspacePressed();
+    }
   });
 
 function numberPressed(nmbr) {
@@ -88,13 +88,13 @@ function buttonDisabled(disableOrNo) {
 }
 
 function backspacePressed() {
-    if (!(numbers.length == 0)) {
-    numbers = numbers.substring(0, (numbers.length - 1));
-    history = history.substring(0, (history.length -1))
+  if (!(numbers.length == 0)) {
+    numbers = numbers.substring(0, numbers.length - 1);
+    history = history.substring(0, history.length - 1);
     screenNumberUpdate(numbers);
-    } else {
-        return;
-    }
+  } else {
+    return;
+  }
 }
 
 function resultPressed() {
@@ -134,8 +134,10 @@ function calculate() {
     result = result.toExponential(3);
   }
 
+  numbers = result.toString();
+  history = result.toString();
   buttonDisabled("no");
-  screenNumberUpdate(result);
+  screenNumberUpdate(numbers);
 }
 
 function screenNumberUpdate(nmbr) {
