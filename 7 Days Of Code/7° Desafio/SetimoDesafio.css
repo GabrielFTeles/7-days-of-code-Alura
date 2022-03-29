@@ -1,0 +1,112 @@
+@font-face {    font-family: Digital;    src: url(./digital-7.ttf); }
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
+
+* {
+    font-family: 'Merriweather Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(129, 213, 241);
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #575757;
+    width: 350px;
+    height: 475px;
+    border-radius: 30px;
+    box-shadow: 5px 6px 17px 1px #111;
+}
+
+.calculatorScreen {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: #aaaaaa;
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 80px;
+    min-height: 80px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 2px #222;
+    font-family: 'Roboto', sans-serif;
+}
+
+#history {
+    font-family: Digital;
+    font-weight: bold;
+    color: rgb(21, 116, 49);
+    margin-left: 10px;
+    margin-bottom: -3px;
+    margin-top: 10px;
+}
+
+#actual {
+    font-weight: bold;
+    font-size: 40px;
+    margin-left: 10px;
+    color: rgb(3, 92, 30);
+    font-family: Digital;
+    letter-spacing: 1px;
+}
+
+.topButtons {
+    display: flex;
+    justify-content: flex-end;
+    width: 81%;
+}
+
+#backspace {
+    width: 80px;
+}
+
+#clear {
+    margin-left: 12px;
+    width: 125px;
+    height: 50px;
+}
+
+#division {
+    width: 60px;
+    margin-left: 12px;
+    background-color: #ededed;
+}
+
+.calculatorButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    margin-top: 15px;
+    width: 300px;
+    row-gap: 15px;
+}
+
+.bottomBtns {
+    width: 60px;
+    height: 50px;
+    background-color: #ededed;
+}
+
+button {
+    cursor: pointer;
+    font-weight: bold;
+    border: 1.5px solid #303030;
+    border-radius: 15px;
+    border-bottom: 3px outset #ededed;
+    box-shadow: 2px 5px 6px 1px rgb(0, 0, 0, 0.3);
+    transition: 0.1s;
+    color: black;
+}
+
+button:hover {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 0;
+    border-bottom: 1.5px solid #303030;
+}
