@@ -34,9 +34,10 @@ document
 //Função chamada quando algum número é pressionado.
 function numberPressed(nmbr) {
   let verify = verifyPoint(nmbr);
-  if (verify == true && numbers.length != 14) {
-    if (numbers == "0") {
+  if (verify === true && numbers.length != 14) {
+    if (numbers === "0") {
       numbers = "";
+      history = "";
     }
     numbers += nmbr;
     history += nmbr;
