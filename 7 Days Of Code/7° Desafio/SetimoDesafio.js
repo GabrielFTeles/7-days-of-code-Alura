@@ -49,9 +49,9 @@ function numberPressed(nmbr) {
 
 //Função que verifica se o número pressionado é um ponto e faz algumas outras verificações por ex: se não ter nenhum número na tela quando o ponto é pressionado ele adiciona um 0 na frente igual as calculadoras comuns, também verifica se já há um ponto no número da Atual, caso haja ele só retorna a função e o botão de . não isere valor nenhum no numero Atual.
 function verifyPoint(nmbr) {
-  if (numbers.length != 14 && nmbr == "." && numbers.length == 0) {
-    numbers += "0" + nmbr;
-    history += "0" + nmbr;
+  if (numbers.length != 14 && nmbr == "." && (numbers.length == 0 || numbers == '0' )) {
+    numbers = "0" + nmbr;
+    history = "0" + nmbr;
     screenNumberUpdate(numbers);
     return false;
   } else if (nmbr == "." && numbers.includes(".")) {
